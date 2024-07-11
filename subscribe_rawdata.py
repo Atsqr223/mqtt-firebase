@@ -162,7 +162,7 @@ def plot_figure(xf_final,yf_final,N_final,lpf_cutoff,i,index_temp):
     frame2 = pd.DataFrame(dict2)
     cframe = pd.concat([frame1, frame2], axis=1)
     #cframe.to_csv('Radar_log.csv', index=False, columns=["Time Stamp1","Sample1_data","Time Stamp2", "Sample2_data"])
-    cframe.to_csv('F:/Internship/'+str(index_temp)+'/Radar_log'+str(count_plot[index_temp-1])+'.csv', index=False, columns=["Time Stamp1","Sample1_data","Time Stamp2", "Sample2_data"])
+    cframe.to_csv('./'+str(index_temp)+'/Radar_log'+str(count_plot[index_temp-1])+'.csv', index=False, columns=["Time Stamp1","Sample1_data","Time Stamp2", "Sample2_data"])
 #cframe.to_csv('/home/tcs/rajat/MQTT/PycharmProjects/mqtt_server_client_final/plots/Radar'
            # +str(index_temp)+'/Radar_log.csv', index=False, columns=["Time Stamp1","Sample1_data","Time Stamp2", "Sample2_data"])
     count_plot[index_temp-1] +=1
