@@ -2,9 +2,14 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 import csv
 from collections import deque
+import os
+# importing necessary functions from dotenv library
+from dotenv import load_dotenv, dotenv_values 
+# loading variables from .env file
+load_dotenv() 
 
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate('C:/Users/tcs/Downloads/ball-mill-website-firebase-adminsdk-ni6zi-771a1e9b64.json')  # Update this path to your credentials file
+cred = credentials.Certificate(os.getenv( "Firebase_admin_sdk_path"))
 firebase_admin.initialize_app(cred)
 
 # Initialize Firestore
